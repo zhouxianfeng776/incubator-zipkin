@@ -101,7 +101,8 @@ class ZipkinMySQLStorageProperties implements Serializable { // for Spark jobs
 
   public DataSource toDataSource() {
     HikariDataSource result = new HikariDataSource();
-    result.setDriverClassName("org.mariadb.jdbc.Driver");
+//    result.setDriverClassName("org.mariadb.jdbc.Driver");
+    result.setDriverClassName("com.mysql.cj.jdbc.Driver");
     result.setJdbcUrl(determineJdbcUrl());
     result.setMaximumPoolSize(getMaxActive());
     result.setUsername(getUsername());

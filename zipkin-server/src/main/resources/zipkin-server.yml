@@ -1,1 +1,7 @@
 spring.profiles.include: shared
+
+
+STORAGE_TYPE: mysql
+MYSQL_JDBC_URL: jdbc:mysql://10.202.200.65:3306/zipkin-zhou?allowMultiQueries=true&useUnicode=true&tinyInt1isBit=false&characterEncoding=UTF-8&useSSL=true&serverTimezone=Hongkong&nullCatalogMeansCurrent=true
+MYSQL_USER: nutsauth
+MYSQL_PASS: 1qaz@WSX3edc

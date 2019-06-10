@@ -18,8 +18,12 @@ package zipkin.server;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.Bean;
 import zipkin2.server.internal.EnableZipkinServer;
 import zipkin2.server.internal.RegisterZipkinHealthIndicators;
+import zipkin2.storage.mysql.v1.MySQLStorage;
+
+import javax.sql.DataSource;
 
 @SpringBootApplication
 @EnableZipkinServer
@@ -35,4 +39,5 @@ public class ZipkinServer {
         .listeners(new RegisterZipkinHealthIndicators())
         .properties("spring.config.name=zipkin-server").run(args);
   }
+
 }
