@@ -142,6 +142,7 @@ public class ZipkinHttpCollector {
           nioBuffer = ByteBuffer.wrap(content.array(), content.offset(), content.length());
         }
 
+
         try {
           SpanBytesDecoderDetector.decoderForListMessage(nioBuffer);
         } catch (IllegalArgumentException e) {
@@ -246,7 +247,6 @@ final class BodyIsExceptionMessage implements ExceptionHandlerFunction {
       return HttpResponse.of(BAD_REQUEST, MediaType.ANY_TEXT_TYPE, message);
     } else {
       LOGGER.warn("Unexpected error handling request.", cause);
-
       return HttpResponse.of(INTERNAL_SERVER_ERROR, MediaType.ANY_TEXT_TYPE, message);
     }
   }

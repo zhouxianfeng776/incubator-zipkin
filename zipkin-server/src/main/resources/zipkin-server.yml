@@ -1,7 +1,14 @@
 spring.profiles.include: shared
 
 
-STORAGE_TYPE: mysql
-MYSQL_JDBC_URL: jdbc:mysql://10.202.200.65:3306/zipkin-zhou?allowMultiQueries=true&useUnicode=true&tinyInt1isBit=false&characterEncoding=UTF-8&useSSL=true&serverTimezone=Hongkong&nullCatalogMeansCurrent=true
-MYSQL_USER: nutsauth
-MYSQL_PASS: 1qaz@WSX3edc
+#STORAGE_TYPE: mysql
+#MYSQL_JDBC_URL: jdbc:mysql://10.202.200.65:3306/zipkin-zhou?allowMultiQueries=true&useUnicode=true&tinyInt1isBit=false&characterEncoding=UTF-8&useSSL=true&serverTimezone=Hongkong&nullCatalogMeansCurrent=true
+#MYSQL_USER: nutsauth
+#MYSQL_PASS: 1qaz@WSX3edc
+
+debug: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password@localhost:8761/eureka/,http://user:password@localhost:8762/eureka/,http://user:password@localhost:8763/eureka/
